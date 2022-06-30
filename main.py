@@ -175,5 +175,6 @@ if __name__ == "__main__":
 
     os.close(fd)
     os.unlink(path)
+    #os.system(f"rm /tmp/SD_tmp_*")
 
 
