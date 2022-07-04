@@ -62,8 +62,8 @@ def prepare_pocket(
         out_poc_fn, # should be .mol2 format
         verbose=False
         ):
-    if os.path.exists(out_poc_fn):
-        return 0
+    #if os.path.exists(out_poc_fn):
+    #    return 0
     assert in_poc_fn.split('.')[-1] in AVAIL_IN_FORMAT_LIST, "Wrong input format" 
     assert out_poc_fn.split('.')[-1] == "mol2", "Wrong output format"
     command = f"obabel {in_poc_fn} -O {out_poc_fn} "
@@ -81,8 +81,8 @@ def prepare_ligand(
         smarts,
         verbose=False
         ):
-    if os.path.exists(out_lig_fn):
-        return 0
+    #if os.path.exists(out_lig_fn):
+    #    return 0
     assert in_lig_fn.split('.')[-1] in AVAIL_IN_FORMAT_LIST, "Wrong input format" 
     assert ref_lig_fn.split('.')[-1] in AVAIL_IN_FORMAT_LIST, "Wrong ref format" 
     assert out_lig_fn.split('.')[-1] == "sdf", "Wrong output format"
